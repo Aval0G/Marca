@@ -1,8 +1,9 @@
-<script setup></script>
+<script setup>
+import { IHeader } from './components'
+</script>
 
 <template>
-  here comes the header
-
+  <IHeader />
   <main>here comes the main</main>
 </template>
 
