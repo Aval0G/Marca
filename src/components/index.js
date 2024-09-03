@@ -1,1 +1,1 @@
-export { default as IHeader } from './IHeader'
+export { default as IHeader } from './IHeader.vue'
