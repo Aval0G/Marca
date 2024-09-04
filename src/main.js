@@ -2,5 +2,9 @@ import './assets/global.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createVuetify } from 'vuetify/lib/framework.mjs'
 
-createApp(App).mount('#app')
+const vuetify = createVuetify()
+// vuetify configuration
+const app = createApp(App)
+app.use(vuetify).mount('#app')
