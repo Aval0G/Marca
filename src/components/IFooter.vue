@@ -49,10 +49,11 @@
 
 <style lang="sass" scoped>
 @import '@/assets/_colors.sass'
+@import '@/assets/_fonts.sass'
 
 .footer
     text-align: center
-    padding: 20px
+    padding: 10px
     background-color: $gray-100
 
 .enlaces li
@@ -65,10 +66,10 @@
     font-weight: bold !important
 
 .redes-sociales
-    margin-top: 20px
+    margin-top: 5px
 
 .redes-sociales p
-    margin-bottom: 10px
+    margin-bottom: 5px
 
 .redes-lista
     display: flex
@@ -85,9 +86,8 @@
     width: 30px
     height: 30px
     border-radius: 50%
-
-@media (max-width: 600px)
-    .redes-lista
-        flex-direction: column
-        align-items: center
 </style>
+
+<script setup>
+import { VContainer, VRow, VCol } from 'vuetify/components/VGrid'
+</script>

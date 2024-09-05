@@ -1,3 +1,5 @@
 export { default as IHeader } from './IHeader.vue'
-export { default as Ifooter } from './IFooter.vue'
+export { default as IFooter } from './IFooter.vue'
+export { default as ISectionMultiCard } from './ISectionMultiCard.vue'
+export { default as ITest } from './ITest.vue'
 export { default as IHeaderNewsTop } from './IHeaderNewsTop.vue'
