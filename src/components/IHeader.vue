@@ -1,11 +1,12 @@
 <template>
   <header id="principalHeader">
     <IHeaderNewsTop :news="news" />
+    <IHeaderBrand />
   </header>
 </template>
 
 <script setup>
-import { IHeaderNewsTop } from '.'
+import { IHeaderNewsTop, IHeaderBrand } from '.'
 const news = [
   'Nominaciones al Balón de Oro',
   'Nuevo récord de ventas',

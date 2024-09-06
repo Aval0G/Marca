@@ -5,7 +5,7 @@ import { IHeader, IFooter, ISectionMultiCard, ITest } from './components'
 <template>
   <IHeader />
   <ISectionMultiCard />
-  <main>here comes the main</main>
+  <main></main>
   <ITest />
   <IFooter />
 </template>
