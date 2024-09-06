@@ -1,25 +1,50 @@
 <template>
-  <v-card class="mx-auto" max-width="344">
-    <v-img height="200px" src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-img>
+  <v-container fluid class="d-flex justify-center align-center">
+    <v-row dense no-gutters justify-center align-center>
+      <v-col
+        v-for="(card, index) in cards"
+        :key="index"
+        cols="12"
+        md="4"
+        lg="4"
+        xl="3"
+        class="pa-2 d-flex justify-center align-center"
+      >
+        <v-card class="mx-auto" max-width="344">
+          <v-img :src="card.src" height="200px" cover></v-img>
 
-    <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
 
-    <v-card-subtitle> Liga Mx </v-card-subtitle>
+          <v-card-subtitle> {{ card.subtitle }} </v-card-subtitle>
 
-    <v-card-title>
-      Ahora America Padecio, Tigres evitó negociaciones con Luis Quiñonez
-    </v-card-title>
+          <v-card-title> {{ card.title }} </v-card-title>
 
-    <v-divider></v-divider>
+          <v-divider></v-divider>
 
-    <v-card-text> Abigail Parra </v-card-text>
-  </v-card>
+          <v-card-text> {{ card.text }} </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup>
-import { VCard, VCardTitle, VCardSubtitle, VCardText } from 'vuetify/components/VCard'
-import { VImg } from 'vuetify/components/VImg'
-import { VDivider } from 'vuetify/components/VDivider'
+import {
+  VCard,
+  VCardTitle,
+  VCardSubtitle,
+  VCardText,
+  VImg,
+  VDivider,
+  VContainer,
+  VRow,
+  VCol
+} from 'vuetify/components'
+
+// Definir las propiedades con defineProps directamente
+defineProps({
+  cards: Array
+})
 </script>
 
 <style lang="sass" scoped>
@@ -33,7 +58,6 @@ import { VDivider } from 'vuetify/components/VDivider'
   display: flex
   text-overflow: none
   white-space: normal
-
 
 .v-card-subtitle
   font-size: 15px

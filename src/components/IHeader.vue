@@ -3,7 +3,7 @@
     <IHeaderNewsTop :news="news" />
     <IHeaderBrand />
   </header>
-</template>
+  </template>
 
 <script setup>
 import { IHeaderNewsTop, IHeaderBrand } from '.'
