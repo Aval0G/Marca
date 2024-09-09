@@ -24,7 +24,8 @@
         <template v-slot:activator="{ props }">
           <v-btn
             density="comfortable"
-            append-icon="$vuetify"
+            prepend-icon="mdi-earth"
+            append-icon="mdi-chevron-down"
             rounded="lg"
             variant="outlined"
             v-bind="props"
@@ -126,7 +127,7 @@ const languages = [
     .v-btn
       color:$main-red-dark
       :deep(.v-btn__content)
-        z-index: 9999
+        z-index: 10
       :deep(.v-btn__overlay)
         color: white
       &:last-of-type

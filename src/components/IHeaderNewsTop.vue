@@ -1,12 +1,12 @@
 <template>
-  <se id="IHeaderNewsTop">
+  <section id="IHeaderNewsTop">
     <span class="bold">Noticias: </span>
     <div class="news-container">
       <div class="news-wrapper">
         <p v-for="iNew in [...props.news, ...props.news]" :key="iNew" class="new">{{ iNew }}</p>
       </div>
     </div>
-  </se>
+  </section>
 </template>
 
 <script setup>
