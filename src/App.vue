@@ -1,5 +1,12 @@
 <script setup>
-import { IHeader, IFooter, ISectionMultiCard, ITest, IHeaderNav } from './components'
+import {
+  IHeader,
+  IFooter,
+  ISectionMultiCard,
+  ITest,
+  IHeaderNav,
+  ISection_1lg_2md
+} from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
 
 const noticias = {
@@ -27,6 +34,18 @@ const noticias = {
       title: 'The Best Plane',
       subtitle: 'The best plane in the world',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
+    },
+    {
+      src: 'https://cdn.vuetifyjs.com/images/cards/sunshine.jpg',
+      title: 'The Best Sunshine',
+      subtitle: 'The best sunshine in the world',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
+    },
+    {
+      src: 'https://cdn.vuetifyjs.com/images/cards/sunset.jpg',
+      title: 'The Best Sunset',
+      subtitle: 'The best sunset in the world',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
     }
   ]
 }
@@ -36,6 +55,7 @@ const noticias = {
   <v-app>
     <IHeader />
     <IHeaderNav />
+    <ISection_1lg_2md />
     <ISectionMultiCard :cards="noticias.cards" />
     <main></main>
     <ITest />

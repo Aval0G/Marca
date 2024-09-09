@@ -1,15 +1,15 @@
 <template>
   <v-container fluid>
-    <v-row dense no-gutters justify-center align-center>
-      <!-- Centrar horizontal y verticalmente -->
+    <v-row justify-center align-center>
       <v-col
         v-for="(card, index) in cards"
         :key="index"
         cols="12"
-        md="6"
-        lg="4"
         xl="3"
-        class="pa-2"
+        lg="3"
+        md="4"
+        sm="6"
+        xs="12"
       >
         <v-card class="mx-auto" max-width="344">
           <v-img :src="card.src" height="200px" cover></v-img>
