@@ -9,8 +9,8 @@
         <div v-for="(item, index) in newsItems" :key="'first-' + index" class="news-item">
           <v-card class="news-card">
             <div class="news-img-container">
-              <v-img class="news-img" :src="item.image" height="100px"></v-img>
-              <div class="news-subtitle">{{ item.category }}</div>
+              <v-img class="news-img" :src="item.src" height="100px"></v-img>
+              <div class="news-subtitle">{{ item.subtitle }}</div>
             </div>
             <v-card-title class="headline news-title">{{ item.title }}</v-card-title>
           </v-card>
@@ -18,8 +18,8 @@
         <div v-for="(item, index) in newsItems" :key="'second-' + index" class="news-item">
           <v-card class="news-card">
             <div class="news-img-container">
-              <v-img class="news-img" :src="item.image" height="100px"></v-img>
-              <div class="news-subtitle">{{ item.category }}</div>
+              <v-img class="news-img" :src="item.src" height="100px"></v-img>
+              <div class="news-subtitle">{{ item.subtitle }}</div>
             </div>
             <v-card-title class="headline news-title">{{ item.title }}</v-card-title>
           </v-card>

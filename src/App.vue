@@ -13,8 +13,8 @@ import {
 } from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
 
-const noticias = {
-  cards: [
+const Marca = {
+  ISectionMultiCard2Ads: [
     {
       src: 'https://phantom-marca-mx.unidadeditorial.es/c4afd6b4b39fb965cb1f2ac0a055fb34/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259698679900.jpg',
       title:
@@ -71,150 +71,88 @@ const noticias = {
       text: 'Eduardo Avila'
     }
   ],
-  cards2: [
+  INewsTickerContainer: [
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/c4afd6b4b39fb965cb1f2ac0a055fb34/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259698679900.jpg',
-      title:
-        'Fernando Alonso sueña con el nuevo Aston Martin con Adrian Newey: "El equipo del futuro',
-      subtitle: 'F1',
-      text: 'FABIAN TORRES'
+      src: 'https://phantom-marca-mx.unidadeditorial.es/972cc5fb0914fa0f9a0259598a0254d1/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259671831023.jpg',
+      title: 'Adrian Newey ya es oficialmente de Aston Martin.. "El equipo que futuro"',
+      subtitle: 'GP Azerbaiyán F1 2024',
+      text: 'MARCO CANSECO'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/0cc32eb544df5ab689d9370643dac8fb/resize/143/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259383616425.jpg',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/dd0044b9f0fcb5243563e3616c166296/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17260000861230.jpg',
       title:
-        'Conoce al México FC, equipo que milita en España con jugadores Liga MX y Liga de Expansión',
+        'Deco hace menos la salida de Julián Araujo del FC Barcelona "No es un jugador para el Barça"',
       subtitle: 'Mexicanos por el mundo',
-      text: 'LW'
+      text: 'Eduardo Avila'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/a3eb8cab9beb48341484c348cfe7dc04/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259442697899.jpg',
-      title:
-        'El Punto G de la Selección Mexicana: Vasco Aguirre ríe con el "Gustar, ganar, golear... y gozar"',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/d22c053e504fd36ae6f17aab846652bb/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259780229694.jpg',
+      title: 'Guillermo Ochoa no renuncia al Mundial: "A mi edad puedo aportar mucho"',
       subtitle: 'Selección Nacional de México',
       text: 'LW'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/c16b5a5072d9bf7da20cf0f1d110fa40/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259282851092.jpg',
-      title: 'México vs Canadá: Javier Aguirre confirma a Malagón y Chino Huerta titulares',
-      subtitle: 'Selección Nacional de México',
-      text: 'LW'
-    },
-    {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/9e018e9db5b07421ba46e0d583dd02c3/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259175001504.jpg',
-      title:
-        '¡Todo por ambiciosos, Checo! Christian Horner reconoce su falla en Red Bull: "Fuimos demasiado lejos"',
-      subtitle: 'F1',
-      text: 'Angel Huguez'
-    },
-    {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/4cf3187cf643bb608a0e75f968e0ba81/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259241897868.jpg',
-      title:
-        'Liga MX exporta a César Arturo Ramos a Japón y a Jordan Silva a Grecia como rival de Orbelín Pineda',
-      subtitle: 'Mexicanos por el mundo',
-      text: 'LW'
+      src: 'https://phantom-marca-mx.unidadeditorial.es/a30e411ebd2861b6283f9dbe2bec0f08/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259857051648.jpg',
+      title: 'Video muestra maltrato a Tyreek Hill: Cámara de policía muestra el arresto',
+      subtitle: 'NFL'
     }
   ],
-  cards3: [
+  ISectionNews: [
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/c4afd6b4b39fb965cb1f2ac0a055fb34/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259698679900.jpg',
-      title:
-        'Fernando Alonso sueña con el nuevo Aston Martin con Adrian Newey: "El equipo del futuro',
-      subtitle: 'F1',
-      text: 'FABIAN TORRES'
+      src: 'https://phantom-marca-mx.unidadeditorial.es/a1143733454b41c27c07ba3f91a26dbd/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259771840079.jpg',
+      title: 'Steve Kerr, dueño del Mallorca, visita a la plantilla del equipo español',
+      subtitle: 'LaLiga EA Sports 2024',
+      text: 'EFE'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/0cc32eb544df5ab689d9370643dac8fb/resize/143/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259383616425.jpg',
-      title:
-        'Conoce al México FC, equipo que milita en España con jugadores Liga MX y Liga de Expansión',
-      subtitle: 'Mexicanos por el mundo',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/6d808da5b4ab19c69bdf0bd4838986ac/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17258894397900.jpg',
+      title: 'La madre de Imane Khelif hospitalizada por el escándalo olímpico de su hija',
+      subtitle: 'Boxeo',
+      text: 'CAROLINA MÁRQUEZ'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/b26ca207605d7b1b061c51d37f5e97bb/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259467294444.jpg',
+      title: 'Fallece James Earl Jones, la mítica voz original de Darth Vader en Star Wars',
+      subtitle: 'Cine y TV',
+      text: 'TW'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/a0f547b5a116db53c1a7f5b80aca54cf/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259453662399.jpg',
+      title: 'Cruz Azul: Giorgios Giakoumakis y su "Qué pedo, wey" que causa sensación en Mexico',
+      subtitle: 'Liga MX 2024',
       text: 'LW'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/a3eb8cab9beb48341484c348cfe7dc04/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259442697899.jpg',
-      title:
-        'El Punto G de la Selección Mexicana: Vasco Aguirre ríe con el "Gustar, ganar, golear... y gozar"',
-      subtitle: 'Selección Nacional de México',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/a8ac9cf1b09ce142f8a35c13b981e954/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259972499783.jpg',
+      title: '¿Veto a Faitelson? Televisa anuncia alineación para pelea de Canelo vs Berlanga',
+      subtitle: 'Televisión',
       text: 'LW'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/c16b5a5072d9bf7da20cf0f1d110fa40/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259282851092.jpg',
-      title: 'México vs Canadá: Javier Aguirre confirma a Malagón y Chino Huerta titulares',
-      subtitle: 'Selección Nacional de México',
-      text: 'LW'
-    },
-    {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/9e018e9db5b07421ba46e0d583dd02c3/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259175001504.jpg',
-      title:
-        '¡Todo por ambiciosos, Checo! Christian Horner reconoce su falla en Red Bull: "Fuimos demasiado lejos"',
-      subtitle: 'F1',
-      text: 'Angel Huguez'
-    },
-    {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/11fe63509d6f5d4597acb6cff064d6fa/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17258934865479.jpg',
-      subtitle: 'F1',
-      title: 'Audi da otro golpe a Red Bull y Checo Pérez y se lleva a unos de sus ingenieros',
-      text: 'Angel Huguez'
+      src: 'https://phantom-marca-mx.unidadeditorial.es/49bb8587f1d78ea1879f826690ea3e29/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17258578564795.jpg',
+      title: 'Tato Noriega y Rayados se despiden de Orbelín Pineda y su fichaje: "Es muy difícil"',
+      subtitle: 'Liga MX 2024',
+      text: 'ÁNGEL HÚGUEZ'
     }
   ],
-  cardsSection3: [
+  ISection3CardsDivider: [
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/c4afd6b4b39fb965cb1f2ac0a055fb34/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259698679900.jpg',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/82f37b2b329d3e02c71d8451a53df7dc/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259845252563.jpg',
       title:
-        'Fernando Alonso sueña con el nuevo Aston Martin con Adrian Newey: "El equipo del futuro',
-      subtitle: 'F1',
-      text: 'FABIAN TORRES'
+        'Colombia vs Argentina: dónde ver en México, hora, pronóstico y alineaciones Eliminatorias Conmebol 2024',
+      subtitle: 'Eliminatorias Conmebol'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/0cc32eb544df5ab689d9370643dac8fb/resize/143/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259383616425.jpg',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/863298e36e8166836df26190e6b479ff/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259795683549.jpg',
       title:
-        'Conoce al México FC, equipo que milita en España con jugadores Liga MX y Liga de Expansión',
-      subtitle: 'Mexicanos por el mundo',
-      text: 'LW'
+        'México vs Canadá: horario y dónde ver partido de Selección Mexicana en Amistoso Internacional 2024',
+      subtitle: 'Selección Nacional de México'
     },
     {
-      src: 'https://phantom-marca-mx.unidadeditorial.es/a3eb8cab9beb48341484c348cfe7dc04/resize/990/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259442697899.jpg',
+      src: 'https://phantom-marca-mx.unidadeditorial.es/a1e191c3fcca08e8016ff8b2847cf951/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259818572541.jpg',
       title:
-        'El Punto G de la Selección Mexicana: Vasco Aguirre ríe con el "Gustar, ganar, golear... y gozar"',
-      subtitle: 'Selección Nacional de México',
-      text: 'LW'
-    }
-  ]
-}
-
-const newsItems = {
-  news: [
-    {
-      category: 'Liga ',
-      title:
-        'Resultados Liga MX Femenil 2024: tabla de posiciones tras la Jornada 9 y calendario Fecha 10',
-      image:
-        'https://phantom-marca-mx.unidadeditorial.es/58f039408693875d54baf3f8f1f057bb/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259314440627.jpg'
-    },
-    {
-      category: 'Actualidad',
-      title:
-        '¿Cuándo es el Simulacro Nacional de septiembre 2024? A qué hora sonará la alarma sísmica',
-      image:
-        'https://phantom-marca-mx.unidadeditorial.es/ca569ed15ecb9476fa77a80ff4b67019/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259173070329.jpg'
-    },
-    {
-      category: 'NFL',
-      title:
-        'Resultados de la NFL 2024 S1: posiciones del futbol americano tras el Monday Night Football',
-      image:
-        'https://phantom-marca-mx.unidadeditorial.es/8f58e9f7b1478da781114c287b85cd80/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259387389663.jpg'
-    },
-    {
-      category: 'F1',
-      title: 'Audi da otro golpe a Red Bull y Checo Pérez y se lleva a unos de sus ingenieros',
-      image:
-        'https://phantom-marca-mx.unidadeditorial.es/11fe63509d6f5d4597acb6cff064d6fa/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17258934865479.jpg'
-    },
-    {
-      category: 'Futbol',
-      title: 'Así está el balance en gasto de fichajes desde hace 10 años',
-      image:
-        'https://phantom-marca-mx.unidadeditorial.es/618915d22743fe61eba4a841ef88767e/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17258980835052.jpg'
+        'Partidos hoy México, Conmebol y más: horarios y dónde ver juegos hoy martes 10 de septiembre',
+      subtitle: 'Futbol'
     }
   ]
 }
@@ -241,13 +179,14 @@ const sidebarItems = [
     <IHeader />
     <IHeaderNav />
     <ISection_3Cards />
-    <ISectionMultiCard2Ads :cards="noticias.cards" />
-    <INewsTickerContainer :newsItems="newsItems.news" />
+    <ISectionMultiCard2Ads :cards="Marca.ISectionMultiCard2Ads" />
+    <INewsTickerContainer :newsItems="Marca.INewsTickerContainer" />
     <main></main>
-    <ISectionNews :cards="noticias.cards3" :sidebarItems="sidebarItems" />
-    <ISectionMultiCard1Ads :cards="noticias.cards2" />
-    <ISection3CardsDivider :cards="noticias.cardsSection3" />
-    <ITest :cards="noticias.cardsSection3" />
+    <ISectionNews :cards="Marca.ISectionNews" :sidebarItems="sidebarItems" />
+    <ISection3CardsDivider :cards="Marca.ISection3CardsDivider" />
+    <ISectionMultiCard1Ads :cards="Marca.ISectionMultiCard2Ads" />
+
+    <ITest />
     <IFooter />
   </v-app>
 </template>
