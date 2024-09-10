@@ -1,6 +1,9 @@
 <template>
   <v-container fluid>
-    <v-row justify-center align-center>
+    <v-row
+      justify="center"
+      :class="{ 'justify-center': cards.length <= 2 }"
+    >
       <v-col
         v-for="(card, index) in cards"
         :key="index"
@@ -29,6 +32,7 @@
   </v-container>
 </template>
 
+
 <script setup>
 import {
   VCard,
@@ -39,7 +43,8 @@ import {
   VDivider,
   VContainer,
   VRow,
-  VCol
+  VCol,
+  VSpacer
 } from 'vuetify/components'
 
 defineProps({
@@ -70,4 +75,7 @@ defineProps({
   font-weight: bold
   color: $main-red
   margin-top: 10px
+.justify-center 
+  justify-content: center !important
+
 </style>

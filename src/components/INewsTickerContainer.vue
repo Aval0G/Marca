@@ -21,76 +21,43 @@
   </v-container>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { VContainer, VCard, VCardSubtitle, VCardTitle, VImg } from 'vuetify/components';
 
-export default {
-  name: 'NewsTicker',
-  components: {
-    VContainer,
-    VCard,
-    VCardSubtitle,
-    VCardTitle,
-    VImg,
-  },
-  data() {
-    return {
-      newsItems: [
-        {
-          category: "Actualidad",
-          title: "¿Cuándo es el Simulacro Nacional de septiembre 2024? A qué hora sonará la alarma sísmica",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-        {
-          category: "Liga Mexicana de Béisbol (LMB)",
-          title: "Juego 4 Diablos Rojos vs Sultanes: a qué hora y dónde ver la Serie del Rey 2024",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-        {
-          category: "NFL",
-          title: "Jets vs 49ers: dónde ver y a qué hora es el juego de San Francisco en NFL 2024",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-        {
-          category: "Fórmula 1",
-          title: "Horarios y dónde ver el Gran Premio de Italia 2024 de Fórmula 1",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-        {
-          category: "Liga MX",
-          title: "Cruz Azul vs Pumas: a qué hora y dónde ver el Clásico Capitalino de la Liga MX",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-        {
-          category: "NFL",
-          title: "Chiefs vs Ravens: a qué hora y dónde ver el juego de la Semana 2 de la NFL 2024",
-          image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
-        },
-      ],
-      scrollInterval: null,
-    };
-  },
-  mounted() {
-    this.startScroll();
-  },
-  beforeUnmount() {
-    this.pauseScroll();
-  },
-  methods: {
-    startScroll() {
-      this.scrollInterval = setInterval(() => {
-        const ticker = this.$refs.ticker;
-        ticker.scrollLeft += 1;
-        if (ticker.scrollLeft >= ticker.scrollWidth / 2) {
-          ticker.scrollLeft = 0; 
-        }
-      }, 20);
-    },
-    pauseScroll() {
-      clearInterval(this.scrollInterval);
-    },
-  },
-};
+const props = defineProps({
+  newsItems: {
+    type: Array,
+    required: true
+  }
+});
+
+const { newsItems } = props;
+const ticker = ref(null);
+let scrollInterval = null;
+
+function startScroll() {
+  scrollInterval = setInterval(() => {
+    if (ticker.value) {
+      ticker.value.scrollLeft += 1;
+      if (ticker.value.scrollLeft >= ticker.value.scrollWidth / 2) {
+        ticker.value.scrollLeft = 0; 
+      }
+    }
+  }, 20);
+}
+
+function pauseScroll() {
+  clearInterval(scrollInterval);
+}
+
+onMounted(() => {
+  startScroll();
+});
+
+onBeforeUnmount(() => {
+  pauseScroll();
+});
 </script>
 
 <style lang="sass" scoped>
