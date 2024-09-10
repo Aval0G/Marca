@@ -18,6 +18,18 @@ const noticias = {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
     },
     {
+      src: 'https://cdn.vuetifyjs.com/images/cards/desert.jpg',
+      title: 'The Best Desert',
+      subtitle: 'The best desert in the world',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
+    },
+    {
+      src: 'https://cdn.vuetifyjs.com/images/cards/desert.jpg',
+      title: 'The Best Desert',
+      subtitle: 'The best desert in the world',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
+    },
+    {
       src: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
       title: 'The Best Docks',
       subtitle: 'The best docks in the world',
@@ -49,6 +61,46 @@ const noticias = {
     }
   ]
 }
+
+const newsItems ={
+  news: [
+  {
+    category: "Actualidad",
+    title: "¿Cuándo es el Simulacro Nacional de septiembre 2024? A qué hora sonará la alarma sísmica",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category: "Liga Mexicana de Béisbol (LMB)",
+    title: "Juego 4 Diablos Rojos vs Sultanes: a qué hora y dónde ver la Serie del Rey 2024",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category: "NFL",
+    title: "Jets vs 49ers: dónde ver y a qué hora es el juego de San Francisco en NFL 2024",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category: "Fórmula 1",
+    title: "Horarios y dónde ver el Gran Premio de Italia 2024 de Fórmula 1",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category: "Liga MX",
+    title: "Cruz Azul vs Pumas: a qué hora y dónde ver el Clásico Capitalino de la Liga MX",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category: "NFL",
+    title: "Chiefs vs Ravens: a qué hora y dónde ver el juego de la Semana 2 de la NFL 2024",
+    image: "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png",
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+  },
+  ]
+};
 </script>
 
 <template>
@@ -58,7 +110,7 @@ const noticias = {
     <ISection_1lg_2md />
     <ISectionMultiCard :cards="noticias.cards" />
     <main></main>
-    <ITest />
+    <ITest :news-items="newsItems.news" />
     <IFooter />
   </v-app>
 </template>

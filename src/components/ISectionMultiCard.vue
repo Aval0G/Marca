@@ -11,7 +11,7 @@
         sm="6"
         xs="12"
       >
-        <v-card class="mx-auto" max-width="344">
+        <v-card class="mx-auto news-card" max-width="344">
           <v-img :src="card.src" height="200px" cover></v-img>
 
           <v-spacer></v-spacer>
@@ -42,7 +42,6 @@ import {
   VCol
 } from 'vuetify/components'
 
-// Definir las propiedades con defineProps directamente
 defineProps({
   cards: Array
 })
@@ -52,6 +51,12 @@ defineProps({
 @import '@/assets/_colors.sass'
 @import '@/assets/_fonts.sass'
 
+.news-card
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+  &:hover
+    transform: scale(1.05)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  
 .v-card-title
   font-size: 20px
   font-weight: 500
