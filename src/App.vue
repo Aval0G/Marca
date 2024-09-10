@@ -5,7 +5,8 @@ import {
   ISectionMultiCard,
   IHeaderNav,
   ISectionNews,
-  INewsTickerContainer
+  INewsTickerContainer,
+  ISection_3Cards
 } from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
 
@@ -54,7 +55,7 @@ const noticias = {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
     },
     {
-      src: 'https://cdn.vuetifyjs.com/images/cards/sunset.jpg',
+      src: 'https://cdn.vuetifyjs.com/images/cards/desert.jpg',
       title: 'The Best Sunset',
       subtitle: 'The best sunset in the world',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna et felis.'
@@ -106,23 +107,34 @@ const cardsNews = [
 {
     category : "NBA",
     title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
-    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
   },
   {
     category : "NBA",
     title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
-    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
   },
   {
     category : "NBA",
     title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
-    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
   },
   {
     category : "NBA",
     title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
-    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
-  },80
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+  },
+
 
 ]
 
@@ -154,6 +166,7 @@ const sidebarItems = [
     <INewsTickerContainer :newsItems="newsItems.news" />
     <main></main>
     <ISectionNews :cards="cardsNews" :sidebarItems="sidebarItems" />
+    <ISection_3Cards />
     <IFooter />
   </v-app>
 </template>
