@@ -1,19 +1,27 @@
 <template>
-  <v-container class="news-ticker-container" fluid @mouseover="pauseScroll" @mouseleave="startScroll">
+  <v-container
+    class="news-ticker-container"
+    @mouseover="pauseScroll"
+    @mouseleave="startScroll"
+  >
     <div ref="ticker" class="news-ticker">
       <div class="news-items">
         <div v-for="(item, index) in newsItems" :key="'first-' + index" class="news-item">
-          <v-card class="ma-3 pa-3 news-card">
-            <v-card-subtitle class="font-weight-bold news-category">{{ item.category }}</v-card-subtitle>
+          <v-card class="news-card">
+            <div class="news-img-container">
+              <v-img class="news-img" :src="item.image" height="100px"></v-img>
+              <div class="news-subtitle">{{ item.category }}</div>
+            </div>
             <v-card-title class="headline news-title">{{ item.title }}</v-card-title>
-            <v-img :src="item.image" height="100" contain></v-img>
           </v-card>
         </div>
         <div v-for="(item, index) in newsItems" :key="'second-' + index" class="news-item">
-          <v-card class="ma-3 pa-3 news-card">
-            <v-card-subtitle class="font-weight-bold news-category">{{ item.category }}</v-card-subtitle>
+          <v-card class="news-card">
+            <div class="news-img-container">
+              <v-img class="news-img" :src="item.image" height="100px"></v-img>
+              <div class="news-subtitle">{{ item.category }}</div>
+            </div>
             <v-card-title class="headline news-title">{{ item.title }}</v-card-title>
-            <v-img :src="item.image" height="100" contain></v-img>
           </v-card>
         </div>
       </div>
@@ -22,78 +30,103 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { VContainer, VCard, VCardSubtitle, VCardTitle, VImg } from 'vuetify/components';
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { VContainer, VCard, VCardTitle, VImg } from 'vuetify/components'
 
 const props = defineProps({
   newsItems: {
     type: Array,
     required: true
   }
-});
+})
 
-const { newsItems } = props;
-const ticker = ref(null);
-let scrollInterval = null;
+const { newsItems } = props
+const ticker = ref(null)
+let scrollInterval = null
 
 function startScroll() {
   scrollInterval = setInterval(() => {
     if (ticker.value) {
-      ticker.value.scrollLeft += 1;
+      ticker.value.scrollLeft += 1
       if (ticker.value.scrollLeft >= ticker.value.scrollWidth / 2) {
-        ticker.value.scrollLeft = 0; 
+        ticker.value.scrollLeft = 0
       }
     }
-  }, 20);
+  }, 20)
 }
 
 function pauseScroll() {
-  clearInterval(scrollInterval);
+  clearInterval(scrollInterval)
 }
 
 onMounted(() => {
-  startScroll();
-});
+  startScroll()
+})
 
 onBeforeUnmount(() => {
-  pauseScroll();
-});
+  pauseScroll()
+})
 </script>
 
 <style lang="sass" scoped>
 @import '@/assets/_colors.sass'
 @import '@/assets/_fonts.sass'
 
-.news-ticker-container 
-  overflow: hidden
-  background-color: #f5f5f5
+.news-ticker-container
+  border-top: 2px solid $main-red
+  border-bottom: 2px solid $main-red
 
-.news-ticker 
+.news-ticker
   display: flex
   align-items: center
-  height: 200px
+  height: 400px
   overflow: hidden
   position: relative
   white-space: nowrap
 
-.news-items 
+.news-items
   display: inline-flex
 
-.news-item 
-  flex-shrink: 0
-  width: 300px
-  text-align: center
+.news-item
+  width: 350px
+  height: 350px
 
-.news-card 
-  overflow: hidden
+.news-card
+  overflow: visible
   transition: transform 0.3s ease
+  width: 250px
+  height: 100%
+  display: flex
+  flex-direction: column
+  position: relative
 
-.news-card:hover 
+.news-card:hover
   transform: scale(1.05)
 
-.news-category 
-  color: $main-red
+.news-img-container
+  position: relative
+  width: 100%
+  height: 100%
 
-.news-title 
+.news-img
+  width: 100%
+  height: auto !important
+  object-fit: cover
+
+.news-subtitle
+  position: absolute
+  top: 10px
+  left: 10px
+  background-color: $main-red
+  color: white
+  padding: 5px 10px
+  border-radius: 5px
+  font-size: 14px
+
+.news-title
   color: $blue-gray
+  overflow: visible
+  white-space: normal
+  text-align: center
+  margin: 10px 0
 </style>

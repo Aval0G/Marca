@@ -1,45 +1,38 @@
 <template>
-  <v-container fluid>
+  <v-container class="section-container">
     <v-row>
-      <v-col cols="12" md="8" order-md="1" order-1>
+      <v-col cols="12" lg="8" order-md="1" order-1>
         <v-row>
-          <v-col
-            v-for="(card, index) in cards"
-            :key="index"
-            cols="12"
-            xl="4"
-            lg="4"
-            md="6"
-            sm="6"
-          >
+          <v-col v-for="(card, index) in cards" :key="index" cols="12" xl="4" lg="4" md="6" sm="6">
             <v-card class="mx-auto news-card" max-width="344">
-              <v-img :src="card.image" height="200px" cover></v-img>
-
-              <v-spacer></v-spacer>
-
+              <v-img :src="card.src" height="200px" cover></v-img>
               <v-card-subtitle> {{ card.subtitle }} </v-card-subtitle>
-
               <v-card-title> {{ card.title }} </v-card-title>
-
               <v-divider></v-divider>
-
               <v-card-text> {{ card.text }} </v-card-text>
             </v-card>
           </v-col>
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="4" order-md="2" order-2>
+      <v-col cols="12" lg="4" order-md="2" order-2>
         <v-card max-width="400" class="mx-auto sidebar-card">
-          <v-card-title>Lo Más de Marca México</v-card-title>
+          <v-card-title class="sidebar-title">Lo Más de Marca México</v-card-title>
           <v-divider></v-divider>
-          <v-list>
+          <v-row class="sidebar-tabs">
+            <v-col class="active-tab">Leído</v-col>
+            <v-col>Último</v-col>
+          </v-row>
+          <v-list class="sidebar-list">
             <v-list-item
               v-for="(item, index) in sidebarItems"
               :key="index"
-              :class="{'highlighted': index === 0 }"
+              class="sidebar-list-item"
             >
-              <v-list-item-title> {{ index + 1 }}. {{ item.title }} </v-list-item-title>
+              <v-list-item-content class="list-content">
+                <div class="item-index">{{ index + 1 }}</div>
+                <v-list-item-title class="item-title">{{ item.title }}</v-list-item-title>
+              </v-list-item-content>
             </v-list-item>
           </v-list>
         </v-card>
@@ -61,19 +54,21 @@ import {
   VCol,
   VList,
   VListItem,
-  VListItemTitle,
-  VSpacer,
-} from 'vuetify/components';
+  VListItemTitle
+} from 'vuetify/components'
 
 defineProps({
   cards: Array,
-  sidebarItems: Array,
-});
+  sidebarItems: Array
+})
 </script>
 
 <style lang="sass" scoped>
 @import '@/assets/_colors.sass'
 @import '@/assets/_fonts.sass'
+
+.section-container
+  padding: 50px
 
 .news-card
   transition: transform 0.3s ease, box-shadow 0.3s ease
@@ -92,18 +87,62 @@ defineProps({
 .v-card-subtitle
   font-size: 15px
   font-weight: bold
-  color: $main-red
-  margin-top: 10px
+  color: white
+  background-color: $main-red
 
 .sidebar-card
   background-color: #f5f5f5
   padding: 20px
+  display: flex
+  flex-direction: column
 
-.v-list-item
-  font-size: 16px
-  font-weight: normal
+.sidebar-title
+  font-size: 18px
+  font-weight: bold
+  color: white
+  background-color: darken($main-red, 10%) // Usa un rojo más oscuro
+  padding: 10px
 
-.highlighted
+.sidebar-tabs
+  display: flex
+  justify-content: space-between
+  margin: 10px 0
+
+.active-tab
   font-weight: bold
   color: $main-red
+  border-bottom: 2px solid $main-red
+
+.sidebar-list
+  margin-top: 10px
+
+.sidebar-list-item
+  display: flex
+  align-items: center
+  padding: 10px 0
+  border-bottom: 1px solid #ddd
+
+.list-content
+  display: flex
+  align-items: center
+
+.item-index
+  width: 30px
+  height: 30px
+  background-color: $main-red
+  color: white
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  margin-right: 10px
+  font-weight: bold
+  flex-shrink: 0
+
+.item-title
+  font-size: 14px
+  line-height: 1.2
+  white-space: normal
+  overflow: hidden
+  text-overflow: ellipsis
 </style>
