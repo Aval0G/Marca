@@ -1,8 +1,8 @@
 <template>
   <div class="text-center" id="IHeaderDropdown">
-    <v-menu open-on-hover>
+    <v-menu open-on-hover :submenu="IProps.submenu" activator="parent" :location="IProps.location">
       <template v-slot:activator="{ props }">
-        <v-btn color="primary" v-bind="props" append-icon="mdi-chevron-down">
+        <v-btn color="primary" v-bind="props" :append-icon="IProps.icon">
           {{ IProps.title }}
         </v-btn>
       </template>
@@ -20,7 +20,19 @@
 import { VMenu, VBtn, VList, VListItem, VListItemTitle } from 'vuetify/lib/components/index.mjs'
 const IProps = defineProps({
   items: Array,
-  title: String
+  title: String,
+  submenu: {
+    type: Boolean,
+    default: false
+  },
+  location: {
+    type: String,
+    default: 'bottom'
+  },
+  icon: {
+    type: String,
+    default: 'mdi-chevron-down'
+  }
 })
 </script>
 

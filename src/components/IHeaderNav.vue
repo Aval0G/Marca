@@ -1,5 +1,6 @@
 <template>
   <v-app-bar :elevation="0" id="INavBar" :class="scrollDownBG" scroll-behavior="elevate">
+    <IHeaderMultiDropdown v-if="!isScrollingDown" class="NavBarMultiDropdown" />
     <div class="navbar-content" :class="centered">
       <div class="logo-container" v-if="isScrollingDown">
         <img
@@ -11,10 +12,11 @@
       <p v-if="isScrollingDown" class="marca-title">Marca</p>
       <div class="dropdowns" v-if="!isScrollingDown">
         <IHeaderDropdown
-          v-for="(items, index) in dropdownItemsArray"
+          v-for="(items, index) in DROPDOWN_ITEMS_ARRAY"
           :key="index"
           :items="items.items"
           :title="items.title"
+          class="dropdown"
         />
         <div class="red-links">
           <a href="#">Última hora</a>
@@ -25,42 +27,14 @@
       </div>
     </div>
   </v-app-bar>
-  <IScrollBar></IScrollBar>
+  <IScrollBar />
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { VAppBar } from 'vuetify/lib/components/index.mjs'
-import { IScrollBar } from '.'
-import { IHeaderDropdown } from '.'
-const soccerItems = {
-  title: 'Fútbol',
-  items: [
-    { title: 'Liga F' },
-    { title: 'LA LIGA EA Sports' },
-    { title: 'Premier League' },
-    { title: 'Serie A' },
-    { title: 'Copa del Rey' },
-    { title: 'UEFA Champions League' }
-  ]
-}
-const basketballItems = {
-  title: 'Baloncesto',
-  items: [{ title: 'NBA' }, { title: 'WNBA' }, { title: 'FIBA' }, { title: 'Euroleague' }]
-}
-const motorItems = {
-  title: 'Motor',
-  items: [{ title: 'F1' }, { title: 'MotoGP' }, { title: 'Nascar' }]
-}
-const sportsCenterItems = {
-  title: 'Polideportivo',
-  items: [{ title: 'Atletismo' }, { title: 'Ciclismo' }, { title: 'Golf' }, { title: 'Tenis' }]
-}
-const carsItems = {
-  title: 'Coches',
-  items: [{ title: 'Coches' }, { title: 'Motos' }, { title: 'Tráfico' }, { title: 'Tecnología' }]
-}
-const dropdownItemsArray = [soccerItems, basketballItems, motorItems, sportsCenterItems, carsItems]
+import { IScrollBar, IHeaderDropdown, IHeaderMultiDropdown } from '.'
+import { DROPDOWN_ITEMS_ARRAY } from '../constants/exampleItems.js'
 
 // Variable reactiva para detectar si estás desplazando hacia abajo
 const isScrollingDown = ref(false)
@@ -94,6 +68,7 @@ const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
 <style lang="sass" scoped>
 @import '../assets/_colors.sass'
 @import '../assets/_fonts.sass'
+@import '../assets/_mixins.sass'
 #INavBar
     position: sticky !important
     background-color: $main-red
@@ -113,6 +88,11 @@ const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
         display: flex
         align-items: center
         justify-content: center
+        .dropdown
+          height: 100%
+          .v-btn
+            height: 100%
+            border-radius: 0
         .red-links
           display: flex
           align-items: center
@@ -139,6 +119,9 @@ const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
             &:last-child
               &::after
                 display: none
+        @include max-laptop()
+          .red-links
+            display: none
         .mas-title
           margin-left: 1rem
           font-weight: 700
@@ -163,4 +146,10 @@ const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
         font-size: 1.5rem
         font-weight: 700
         color: $main-gray-dark
+    @include min-tablet()
+      .NavBarMultiDropdown
+        display: none
+    @include max-tablet()
+      :deep(.navbar-content) .dropdowns
+        display: none
 </style>

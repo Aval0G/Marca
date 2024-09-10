@@ -1,0 +1,17 @@
+//mixins tablet and desktop
+
+@mixin min-tablet()
+    @media (min-width: 768px)
+        @content
+
+@mixin max-tablet()
+    @media (max-width: 767px)
+        @content
+
+@mixin min-laptop()
+    @media (min-width: 1024px)
+        @content
+
+@mixin max-laptop()
+    @media (max-width: 1023px)
+        @content
