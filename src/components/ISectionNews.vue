@@ -1,19 +1,19 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col cols="8">
+      <v-col cols="12" md="8" order-md="1" order-1>
         <v-row>
           <v-col
             v-for="(card, index) in cards"
             :key="index"
             cols="12"
-            xl="6"
-            lg="6"
+            xl="4"
+            lg="4"
             md="6"
-            sm="12"
+            sm="6"
           >
             <v-card class="mx-auto news-card" max-width="344">
-              <v-img :src="card.src" height="200px" cover></v-img>
+              <v-img :src="card.image" height="200px" cover></v-img>
 
               <v-spacer></v-spacer>
 
@@ -29,7 +29,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="4">
+      <v-col cols="12" md="4" order-md="2" order-2>
         <v-card max-width="400" class="mx-auto sidebar-card">
           <v-card-title>Lo Más de Marca México</v-card-title>
           <v-divider></v-divider>
@@ -106,5 +106,4 @@ defineProps({
 .highlighted
   font-weight: bold
   color: $main-red
-
 </style>
