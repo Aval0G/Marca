@@ -151,9 +151,7 @@ const sidebarItems = [
   { title: 'Jets vs 49ers' },
   { title: 'Lo más leído' },
   { title: 'Lo más visto' },
-  { title: 'Lo más comentado' },
-  { title: 'Lo más compartido' },
-  { title: 'Lo más valorado' },
+  { title: 'Lo más comentado' }
 ]
 
 </script>
