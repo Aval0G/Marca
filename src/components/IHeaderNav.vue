@@ -1,5 +1,10 @@
 <template>
-  <v-app-bar :elevation="0" id="INavBar" :class="scrollDownBG" scroll-behavior="elevate">
+  <v-app-bar
+    :elevation="0"
+    id="INavBar"
+    :class="`${scrollDownBG} ${reachedTopClass}`"
+    scroll-behavior="elevate"
+  >
     <IHeaderMultiDropdown v-if="!isScrollingDown" class="NavBarMultiDropdown" />
     <div class="navbar-content" :class="centered">
       <div class="logo-container" v-if="isScrollingDown">
@@ -27,17 +32,19 @@
       </div>
     </div>
   </v-app-bar>
+  <IHeaderSoccerTeams />
   <IScrollBar />
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { VAppBar } from 'vuetify/lib/components/index.mjs'
-import { IScrollBar, IHeaderDropdown, IHeaderMultiDropdown } from '.'
+import { IScrollBar, IHeaderDropdown, IHeaderMultiDropdown, IHeaderSoccerTeams } from '.'
 import { DROPDOWN_ITEMS_ARRAY } from '../constants/exampleItems.js'
 
 // Variable reactiva para detectar si estás desplazando hacia abajo
 const isScrollingDown = ref(false)
+const isBeyondTop = ref(false)
 let lastScrollPosition = 0
 let navbarOffsetTop = 0
 
@@ -46,6 +53,7 @@ const handleScroll = () => {
   // Verificar si ya llegaste a la parte superior de la navbar
   const hasReachedTop = currentScrollPosition > navbarOffsetTop
   isScrollingDown.value = currentScrollPosition > lastScrollPosition && hasReachedTop
+  isBeyondTop.value = hasReachedTop
   lastScrollPosition = currentScrollPosition
 }
 
@@ -62,6 +70,7 @@ onBeforeUnmount(() => {
 })
 
 const scrollDownBG = computed(() => (isScrollingDown.value ? 'scrolling-down' : ''))
+const reachedTopClass = computed(() => (isBeyondTop.value ? 'has-reached-top' : ''))
 const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
 </script>
 
@@ -76,6 +85,8 @@ const centered = computed(() => (isScrollingDown.value ? '' : 'centered'))
     height: 44px
     &.scrolling-down
         background-color: white
+    &.has-reached-top
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,.3) !important
     :deep(.v-toolbar__content)
       height: 44px !important
     :deep(.navbar-content)
