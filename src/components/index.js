@@ -9,6 +9,5 @@ export { default as IScrollBar } from './IScrollBar.vue'
 export { default as IHeaderDropdown } from './IHeaderDropdown.vue'
 export { default as ISectionNews } from './ISectionNews.vue'
 export { default as INewsTickerContainer } from './INewsTickerContainer.vue'
+export { default as IHeaderMultiDropdown } from './IHeaderMultiDropdown.vue'
 export { default as ISection_3Cards } from './ISection_3Cards.vue'
-
-
