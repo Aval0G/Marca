@@ -1,6 +1,9 @@
 <template>
   <v-container fluid>
-    <v-row justify-center align-center>
+    <v-row
+      justify="center"
+      :class="{ 'justify-center': cards.length <= 2 }"
+    >
       <v-col
         v-for="(card, index) in cards"
         :key="index"
@@ -11,7 +14,7 @@
         sm="6"
         xs="12"
       >
-        <v-card class="mx-auto" max-width="344">
+        <v-card class="mx-auto news-card" max-width="344">
           <v-img :src="card.src" height="200px" cover></v-img>
 
           <v-spacer></v-spacer>
@@ -29,6 +32,7 @@
   </v-container>
 </template>
 
+
 <script setup>
 import {
   VCard,
@@ -39,10 +43,10 @@ import {
   VDivider,
   VContainer,
   VRow,
-  VCol
+  VCol,
+  VSpacer
 } from 'vuetify/components'
 
-// Definir las propiedades con defineProps directamente
 defineProps({
   cards: Array
 })
@@ -52,6 +56,12 @@ defineProps({
 @import '@/assets/_colors.sass'
 @import '@/assets/_fonts.sass'
 
+.news-card
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+  &:hover
+    transform: scale(1.05)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  
 .v-card-title
   font-size: 20px
   font-weight: 500
@@ -65,4 +75,7 @@ defineProps({
   font-weight: bold
   color: $main-red
   margin-top: 10px
+.justify-center 
+  justify-content: center !important
+
 </style>
