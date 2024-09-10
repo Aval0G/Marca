@@ -7,6 +7,7 @@ export { default as IHeaderBrand } from './IHeaderBrand.vue'
 export { default as IHeaderNav } from './IHeaderNav.vue'
 export { default as IScrollBar } from './IScrollBar.vue'
 export { default as IHeaderDropdown } from './IHeaderDropdown.vue'
-export { default as ISection_1lg_2md } from './ISection_1lg_2md.vue'
+export { default as ISectionNews } from './ISectionNews.vue'
+export { default as INewsTickerContainer } from './INewsTickerContainer.vue'
 
 

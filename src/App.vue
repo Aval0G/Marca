@@ -3,9 +3,9 @@ import {
   IHeader,
   IFooter,
   ISectionMultiCard,
-  ITest,
   IHeaderNav,
-  ISection_1lg_2md
+  ISectionNews,
+  INewsTickerContainer
 } from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
 
@@ -101,16 +101,59 @@ const newsItems ={
   },
   ]
 };
+
+const cardsNews = [
+{
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+  },
+  {
+    category : "NBA",
+    title : "Lakers vs Warriors: a qué hora y dónde ver el juego de la NBA 2024",
+    image : "https://www.si.com/.image/t_share/MTk0MDM5NTg3MDA4Njg1NTcz/marcus-freeman---notre-dame.png"
+  },80
+
+]
+
+const sidebarItems = [
+  { title: 'Orden de los signos zodiacales' },
+  { title: 'Canelo Álvarez pide revancha contra Bivol' },
+  { title: 'Juego México vs Nueva Zelanda' },
+  { title: 'Cruz Azul vs Pumas' },
+  { title: 'Chiefs vs Ravens' },
+  { title: 'Lakers vs Warriors' },
+  { title: 'Gran Premio de Italia' },
+  { title: 'Simulacro Nacional' },
+  { title: 'Diablos Rojos vs Sultanes' },
+  { title: 'Jets vs 49ers' },
+  { title: 'Lo más leído' },
+  { title: 'Lo más visto' },
+  { title: 'Lo más comentado' },
+  { title: 'Lo más compartido' },
+  { title: 'Lo más valorado' },
+]
+
 </script>
 
 <template>
   <v-app>
     <IHeader />
     <IHeaderNav />
-    <ISection_1lg_2md />
     <ISectionMultiCard :cards="noticias.cards" />
+    <INewsTickerContainer :newsItems="newsItems.news" />
     <main></main>
-    <ITest :news-items="newsItems.news" />
+    <ISectionNews :cards="cardsNews" :sidebarItems="sidebarItems" />
     <IFooter />
   </v-app>
 </template>

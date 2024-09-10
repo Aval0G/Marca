@@ -94,7 +94,7 @@ defineProps({
   font-weight: bold
   color: $main-red
   margin-top: 10px
-  
+
 .sidebar-card
   background-color: #f5f5f5
   padding: 20px
