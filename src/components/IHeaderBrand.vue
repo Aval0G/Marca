@@ -20,7 +20,7 @@
     </div>
 
     <div class="action-buttons">
-      <v-menu>
+      <v-menu id="languajes">
         <template v-slot:activator="{ props }">
           <v-btn
             density="comfortable"
@@ -42,7 +42,12 @@
           </v-list>
         </v-card>
       </v-menu>
-      <v-btn density="comfortable" rounded="lg" variant="tonal"> Iniciar sesión </v-btn>
+      <v-btn id="suscribeBtn" density="comfortable" rounded="lg" variant="tonal">
+        Suscríbete
+      </v-btn>
+      <v-btn id="loginBtn" density="comfortable" rounded="lg" variant="tonal">
+        Iniciar sesión
+      </v-btn>
     </div>
   </section>
 </template>
@@ -125,13 +130,34 @@ const languages = [
     align-items: center
     gap: 10px
     .v-btn
+      font-size: 12px
+      text-transform: none
+      font-weight: 400
       color:$main-red-dark
+      &:first-of-type
+        padding: 0
+        :deep(.v-btn__prepend)
+          margin: 0
+        :deep(.v-btn__append)
+          margin: 0
+      &:hover
+        background-color: $gray-200
       :deep(.v-btn__content)
         z-index: 10
       :deep(.v-btn__overlay)
         color: white
       &:last-of-type
         border: 1px solid $main-red-dark
+    #suscribeBtn
+      border-color: $gray-200
+      color: white
+      background-color: $main-red
+      &:hover
+        background-color: $main-red-dark
+    #loginBtn
+      border-color: $gray-200
+      :deep(.v-btn__underlay)
+        background-color: transparent
 :deep(.v-list-item--one-line)
   cursor: pointer
   transition: background-color 0.3s
