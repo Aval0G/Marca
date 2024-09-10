@@ -1,8 +1,10 @@
 <template>
   <div class="text-center" id="IHeaderMultiDropdown">
-    <v-btn color="primary" v-bind="props" icon="mdi-menu" />
-    <span>MARCA</span>
-    <v-menu open-on-hover activator="parent">
+    <v-menu activator="parent">
+      <template v-slot:activator="{ props }">
+        <v-btn color="primary" v-bind="props" icon="mdi-menu" />
+        <span>MARCA</span>
+      </template>
       <v-list
         style="background-color: rgba(20, 29, 37, 0.97); color: white"
         id="IHeaderMultiDropdownList"

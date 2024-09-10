@@ -1,6 +1,6 @@
 <template>
   <div class="text-center" id="IHeaderDropdown">
-    <v-menu open-on-hover :submenu="IProps.submenu" activator="parent" :location="IProps.location">
+    <v-menu :submenu="IProps.submenu" activator="parent" :location="IProps.location">
       <template v-slot:activator="{ props }">
         <v-btn color="primary" v-bind="props" :append-icon="IProps.icon">
           {{ IProps.title }}
