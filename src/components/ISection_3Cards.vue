@@ -1,23 +1,19 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row>
-      <!-- Imagen principal con titular grande -->
       <v-col cols="12" md="8">
         <v-card class="main-news-card">
           <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" 
-            height="300px"
+            src="https://phantom-marca-mx.unidadeditorial.es/b8169681a4bb73268bc4b652357c4816/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259175735391.jpg"
+            height="500px"
             cover
           ></v-img>
-          <v-card-subtitle class="main-news-category">
-            SELECCIÓN NACIONAL DE MÉXICO
-          </v-card-subtitle>
+          <v-card-subtitle class="main-news-category"> NFL </v-card-subtitle>
           <v-card-title class="main-news-title">
-            Once titular de México vs Canadá: Chances de oro a Malagón y Chino Huerta
+            Los compañeros de Dak Prescott hacen una sorprendente exigencia tras su nuevo contrato
+            de 240 millones de dólares
           </v-card-title>
-          <v-card-text class="main-news-author">
-            EDOARDO ÁVILA
-          </v-card-text>
+          <v-card-text class="main-news-author"> Eduardo Avila </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" md="4">
@@ -25,38 +21,31 @@
           <v-col cols="12">
             <v-card class="secondary-news-card">
               <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                src="https://phantom-marca-mx.unidadeditorial.es/d50534e437b4fa25a7e2f2991aa0ffb7/resize/235/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259067048662.jpg"
                 height="140px"
                 cover
               ></v-img>
-              <v-card-subtitle class="secondary-news-category">
-                SELECCIÓN NACIONAL DE MÉXICO
-              </v-card-subtitle>
+              <v-card-subtitle class="secondary-news-category"> Actualidad </v-card-subtitle>
               <v-card-title class="secondary-news-title">
-                Vasco Aguirre estira puya a seleccionados: "Me dolería un equipo indolente"
+                Claudia Sheinbaum confirma: "Voy a vivir en Palacio Nacional, es la nota de hoy";
+                ¿cuándo desaloja AMLO?
               </v-card-title>
-              <v-card-text class="secondary-news-author">
-                EDOARDO ÁVILA
-              </v-card-text>
+              <v-card-text class="secondary-news-author"> LW </v-card-text>
             </v-card>
           </v-col>
 
           <v-col cols="12">
             <v-card class="secondary-news-card">
               <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                src="https://phantom-marca-mx.unidadeditorial.es/f596a0f5eda7bb588bc824619b4ff345/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/06/18/17186644052299.jpg"
                 height="140px"
                 cover
               ></v-img>
-              <v-card-subtitle class="secondary-news-category">
-                MEXICANOS POR EL MUNDO
-              </v-card-subtitle>
+              <v-card-subtitle class="secondary-news-category"> Futbol </v-card-subtitle>
               <v-card-title class="secondary-news-title">
-                Este es 'México FC' equipo que milita en España con jugadores Liga MX y Expansión
+                Resultados Progol 2245: premios y quiniela ganadora del fin de semana
               </v-card-title>
-              <v-card-text class="secondary-news-author">
-                LW
-              </v-card-text>
+              <v-card-text class="secondary-news-author"> LW </v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -74,8 +63,8 @@ import {
   VImg,
   VContainer,
   VRow,
-  VCol,
-} from 'vuetify/components';
+  VCol
+} from 'vuetify/components'
 </script>
 
 <style lang="sass" scoped>
@@ -91,18 +80,26 @@ import {
 .main-news-title
   font-size: 24px
   font-weight: bold
-  margin-top: 10px
   color: #333
+  overflow: none
+  white-space: normal
 
 .main-news-category
   font-size: 14px
   font-weight: bold
-  color: $main-red
-  margin-top: 5px
+  color: white
+  background-color: $main-red
 
 .main-news-author
   font-size: 12px
   color: #888
+
+.secondary-news-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
 
 .secondary-news-card
   transition: transform 0.3s ease, box-shadow 0.3s ease
@@ -113,14 +110,15 @@ import {
 .secondary-news-title
   font-size: 16px
   font-weight: 500
-  margin-top: 5px
   color: #333
+  overflow: none
+  white-space: normal
 
 .secondary-news-category
   font-size: 12px
   font-weight: bold
-  color: $main-red
-  margin-top: 5px
+  color: white
+  background-color: $main-red
 
 .secondary-news-author
   font-size: 12px
