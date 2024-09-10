@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h1 class="title">Lo Más Marca de Mexico</h1>
     <v-row>
       <v-col cols="12" md="8">
         <v-card class="main-news-card">
@@ -70,6 +71,14 @@ import {
 <style lang="sass" scoped>
 @import '@/assets/_colors.sass'
 @import '@/assets/_fonts.sass'
+
+.title
+  font-size: 24px
+  font-weight: bold
+  color: $main-red-dark
+  overflow: none
+  white-space: normal
+  padding-bottom: 20px
 
 .main-news-card
   transition: transform 0.3s ease, box-shadow 0.3s ease
