@@ -3,7 +3,7 @@
     <h1 class="title">Baloncesto</h1>
     <v-row>
       <v-col cols="12" md="8">
-        <v-card class="main-news-card">
+        <v-card class="main-news-card c-pointer">
           <v-img
             src="https://phantom-marca-mx.unidadeditorial.es/6fdbd2209edfb2ac9bd855ad242ee502/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/08/17257491959208.jpg"
             height="500px"
@@ -20,7 +20,7 @@
       <v-col cols="12" md="4">
         <v-row>
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/6c119c45d1db5ae8176f71a618f4bf5b/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/07/17256851313719.jpg"
                 height="140px"
@@ -36,7 +36,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/5d802af970f3ac1fe11614cf72470e7d/resize/208/f/webp/mx/assets/multimedia/imagenes/2024/09/06/17256184602162.jpg"
                 height="140px"
