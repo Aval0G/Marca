@@ -6,12 +6,60 @@ import {
   IHeaderNav,
   ISectionNews,
   INewsTickerContainer,
-  ISection_3Cards,
+  ISectionMarca,
   ISectionMultiCard1Ads,
   ISection3CardsDivider,
+  ISectionFutbol,
+  ISectionMatches,
   ITest
 } from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
+
+const football = {
+  ISectionMultiCard1Ads: [
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/8186c96dfd4e6dc9d2585da76da8b542/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260193291498.jpg',
+      title:
+        'Era Javier Aguirre en Selección de México no cautiva en USA: Butacas vacías ante Canadá y Nueva Zelanda',
+      subtitle: 'Selección Nacional de México',
+      text: 'LW'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/bf6d02ab705285591bc970fd8f3e4988/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260181004349.jpg',
+      title:
+        'Víctor Dávila, regalo para Jardine y último fichaje de América ¿Para olvidar a Idrissi?',
+      subtitle: 'Liga MX 2024',
+      text: 'Eduardo Avila'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/3bcf5423ff0ff9b402a0158424e3f5c5/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260165496006.jpg',
+      title:
+        'Resumen y goles Estados Unidos vs. Nueva Zelanda: Team USA da papelón previo a la presentación',
+      subtitle: 'Selección de Estados Unidos',
+      text: 'LW'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/94c3d273c8aa66e80bbcc9079a6af330/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259806002243.jpg',
+      title:
+        'Afición también abandona a la Selección Mexicana ante Canadá: Así la venta de boletos',
+      subtitle: 'Selección Nacional de México',
+      text: 'Israel M. Zúñiga'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/13c36a4836abcb44ca606b5a93998367/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260128853488.jpg',
+      title:
+        'Resumen Venezuela vs Uruguay: Bielsa cede segundo lugar de Eliminatorias, pierde a Cáceres por lesión',
+      subtitle: 'Eliminatorias Conmebol',
+      text: 'LW'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/65a5ef38a45a92d10fb0e91256055a60/resize/828/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259913229501.jpg',
+      title: 'EUA vs Nueva Zelanda: dónde ver y a qué hora juega USA hoy en Amistoso 2024',
+      subtitle: 'Fútbol',
+      text: 'LW'
+    }
+  ]
+}
 
 const Marca = {
   ISectionMultiCard2Ads: [
@@ -178,14 +226,15 @@ const sidebarItems = [
   <v-app>
     <IHeader />
     <IHeaderNav />
-    <ISection_3Cards />
+    <ISectionMarca />
     <ISectionMultiCard2Ads :cards="Marca.ISectionMultiCard2Ads" />
     <INewsTickerContainer :newsItems="Marca.INewsTickerContainer" />
     <main></main>
     <ISectionNews :cards="Marca.ISectionNews" :sidebarItems="sidebarItems" />
     <ISection3CardsDivider :cards="Marca.ISection3CardsDivider" />
-    <ISectionMultiCard1Ads :cards="Marca.ISectionMultiCard2Ads" />
-
+    <ISectionFutbol />
+    <ISectionMultiCard1Ads :cards="football.ISectionMultiCard1Ads" />
+    <ISectionMatches />
     <ITest />
     <IFooter />
   </v-app>
