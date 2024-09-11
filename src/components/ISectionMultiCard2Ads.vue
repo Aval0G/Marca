@@ -2,8 +2,9 @@
   <v-container fluid>
     <v-row>
       <v-col cols="12" xl="2" lg="2" md="3" sm="0" xs="0" class="d-none d-lg-flex ad-column">
-        <div class="ad-space">
+        <div class="ad-space c-pointer">
           <img
+            class="sticky-header-handler"
             src="https://www.telecomasia.net/upload/sprint.editor/44e/44ea35ab0e675839d091667c24862930.png"
             alt="Anuncio"
           />
@@ -22,7 +23,7 @@
             sm="6"
             xs="12"
           >
-            <v-card class="mx-auto news-card" max-width="344">
+            <v-card class="mx-auto news-card c-pointer" max-width="344">
               <v-img :src="card.src" height="200px" cover></v-img>
 
               <v-spacer></v-spacer>
@@ -40,8 +41,9 @@
       </v-col>
 
       <v-col cols="12" xl="2" lg="2" md="3" sm="0" xs="0" class="d-none d-lg-flex ad-column">
-        <div class="ad-space">
+        <div class="ad-space c-pointer">
           <img
+            class="sticky-header-handler"
             src="https://www.telecomasia.net/upload/sprint.editor/44e/44ea35ab0e675839d091667c24862930.png"
             alt="Anuncio"
           />

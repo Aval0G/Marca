@@ -4,7 +4,7 @@
       <v-col cols="12" lg="8" order-md="1" order-1>
         <v-row>
           <v-col v-for="(card, index) in cards" :key="index" cols="12" xl="4" lg="4" md="6" sm="6">
-            <v-card class="mx-auto news-card" max-width="344">
+            <v-card class="mx-auto news-card c-pointer" max-width="344">
               <v-img :src="card.src" height="200px" cover></v-img>
               <v-card-subtitle> {{ card.subtitle }} </v-card-subtitle>
               <v-card-title> {{ card.title }} </v-card-title>
@@ -29,7 +29,7 @@
               :key="index"
               class="sidebar-list-item"
             >
-              <v-list-item-content class="list-content">
+              <v-list-item-content class="list-content c-pointer">
                 <div class="item-index">{{ index + 1 }}</div>
                 <v-list-item-title class="item-title">{{ item.title }}</v-list-item-title>
               </v-list-item-content>
@@ -125,6 +125,8 @@ defineProps({
 .list-content
   display: flex
   align-items: center
+  &:hover
+    color: $main-red
 
 .item-index
   width: 30px

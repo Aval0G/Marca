@@ -3,7 +3,7 @@
     <h1 class="title">Fútbol</h1>
     <v-row>
       <v-col cols="12" md="8">
-        <v-card class="main-news-card">
+        <v-card class="main-news-card c-pointer">
           <v-img
             src="https://phantom-marca-mx.unidadeditorial.es/3200b585ef2c2a597913ae01b8cf3365/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260113832915.jpg"
             height="500px"
@@ -20,7 +20,7 @@
       <v-col cols="12" md="4">
         <v-row>
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/899c22bdf29d7f279406e6246d03a5d2/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260112998320.jpg"
                 height="140px"
@@ -36,7 +36,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/1ef3c7dbe4ddca7015265484222b5cb1/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260069156034.jpg"
                 height="140px"

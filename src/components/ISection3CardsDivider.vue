@@ -13,8 +13,8 @@
             sm="6"
             xs="12"
           >
-            <v-card class="mx-auto news-card" max-width="344">
-              <v-img :src="card.src" height="200px" cover>
+            <v-card class="mx-auto news-card c-pointer" max-width="344">
+              <v-img :src="card.src" height="240px" cover>
                 <v-card-title class="card-title-overlay">{{ card.title }}</v-card-title>
               </v-img>
               <v-card-subtitle class="text-uppercase card-subtitle">

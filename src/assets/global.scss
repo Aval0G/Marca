@@ -1,4 +1,5 @@
 @import './_fonts.sass';
+@import './_colors.sass';
 
 *,
 *::before,
@@ -49,7 +50,6 @@ textarea {
   font-family: $font-family-roboto;
   font-size: 100%;
   margin: 0;
-  
 }
 
 button {
@@ -80,4 +80,31 @@ ol {
 
 .bold {
   font-weight: bold;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.sticky-header-handler {
+  position: sticky;
+  top: 60px;
+}
+
+.v-card-subtitle {
+  opacity: 1;
+}
+
+#redbtndropdown {
+  background-color: $main-red !important;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+#redstrongbtndropdown {
+  background-color: $main-red-dark !important;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
 }

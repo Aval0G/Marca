@@ -3,7 +3,7 @@
     <h1 class="title">Lo Más Marca de Mexico</h1>
     <v-row>
       <v-col cols="12" md="8">
-        <v-card class="main-news-card">
+        <v-card class="main-news-card c-pointer">
           <v-img
             src="https://phantom-marca-mx.unidadeditorial.es/b8169681a4bb73268bc4b652357c4816/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259175735391.jpg"
             height="500px"
@@ -20,7 +20,7 @@
       <v-col cols="12" md="4">
         <v-row>
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/d50534e437b4fa25a7e2f2991aa0ffb7/resize/235/f/webp/mx/assets/multimedia/imagenes/2024/09/09/17259067048662.jpg"
                 height="140px"
@@ -36,7 +36,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-card class="secondary-news-card">
+            <v-card class="secondary-news-card c-pointer">
               <v-img
                 src="https://phantom-marca-mx.unidadeditorial.es/f596a0f5eda7bb588bc824619b4ff345/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/06/18/17186644052299.jpg"
                 height="140px"

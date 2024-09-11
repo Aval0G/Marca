@@ -10,7 +10,7 @@
         md="6"
         lg="4"
       >
-        <v-card class="match-card">
+        <v-card class="match-card c-pointer">
           <v-img :src="match.image" class="match-image" height="150px"></v-img>
           <v-card-title class="headline match-title">{{ match.title }}</v-card-title>
           <v-card-subtitle class="match-subtitle">{{ match.author }}</v-card-subtitle>
@@ -103,8 +103,8 @@ export default {
   background-color: #333;
   color: #fff;
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transform 0.4s,
+    box-shadow 0.4s;
 
   &:hover {
     transform: translateY(-5px);

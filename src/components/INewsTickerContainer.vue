@@ -1,13 +1,9 @@
 <template>
-  <v-container
-    class="news-ticker-container"
-    @mouseover="pauseScroll"
-    @mouseleave="startScroll"
-  >
+  <v-container class="news-ticker-container" @mouseover="pauseScroll" @mouseleave="startScroll">
     <div ref="ticker" class="news-ticker">
       <div class="news-items">
         <div v-for="(item, index) in newsItems" :key="'first-' + index" class="news-item">
-          <v-card class="news-card">
+          <v-card class="news-card c-pointer">
             <div class="news-img-container">
               <v-img class="news-img" :src="item.src" height="100px"></v-img>
               <div class="news-subtitle">{{ item.subtitle }}</div>
@@ -16,7 +12,7 @@
           </v-card>
         </div>
         <div v-for="(item, index) in newsItems" :key="'second-' + index" class="news-item">
-          <v-card class="news-card">
+          <v-card class="news-card c-pointer">
             <div class="news-img-container">
               <v-img class="news-img" :src="item.src" height="100px"></v-img>
               <div class="news-subtitle">{{ item.subtitle }}</div>
