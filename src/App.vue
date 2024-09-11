@@ -11,6 +11,7 @@ import {
   ISection3CardsDivider,
   ISectionFutbol,
   ISectionMatches,
+  ISectionBasketball,
   ITest
 } from './components'
 import { VApp } from 'vuetify/lib/components/index.mjs'
@@ -54,7 +55,7 @@ const football = {
     },
     {
       src: 'https://phantom-marca-mx.unidadeditorial.es/65a5ef38a45a92d10fb0e91256055a60/resize/828/f/webp/mx/assets/multimedia/imagenes/2024/09/10/17259913229501.jpg',
-      title: 'EUA vs Nueva Zelanda: dónde ver y a qué hora juega USA hoy en Amistoso 2024',
+      title: 'EUA vs Nueva Zelanda: dónde ver y a qué hora juega USA hoy en Amistoso del año 2024',
       subtitle: 'Fútbol',
       text: 'LW'
     }
@@ -205,6 +206,97 @@ const Marca = {
   ]
 }
 
+const Basketball = {
+  ISectionNews: [
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/66940bc6273b070c02f8fb01fd88fd14/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/09/01/17251983160210.jpg',
+      title:
+        'Stephen Curry renueva con los Warriors y frustra el sueño de verlo con LeBron: "Mi plan es jugar aquí de por vida"',
+      subtitle: 'NBA',
+      text: 'Eugenio Muñoz'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/02593b3bfa9555de56f901750d5c6428/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/29/17249433514928.jpg',
+      title:
+        'La Selección Colombia "fake" que engaña a Rusia en baloncesto queda expuesta ante todo el publico de las redes sociales',
+      subtitle: 'Basquetbol',
+      text: 'Jose Quiroga'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/dc21534e73fd33d668b3bb5a6b6bb18c/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/12/17234336215263.jpg',
+      title:
+        '¡No son Dream Team! LeBron James le pone nuevo nombre al Team USA de basquetbol tras oro en París 2024',
+      subtitle: 'Juegos de paris 2024',
+      text: 'Eugenio Muñoz'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/5fa421759516c89f48ccd166c92a9c6f/resize/208/f/webp/mx/assets/multimedia/imagenes/2024/08/10/17233243819783.jpg',
+      title:
+        'Resumen USA vs. Francia: El Dream Team se queda con el oro olímpico de la mano de Curry y Lebron James',
+      subtitle: 'Basquetbol',
+      text: 'LW'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/9571e2f8b4c78cc8cc1603b4c97d41f0/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/12/17234875996612.jpg',
+      title:
+        'Critican a LeBron James por gesto grosero con joven que le pide foto en celebración por el oro en París 2024',
+      subtitle: 'NBA',
+      text: 'Parker Jonhson'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/1549f4c436237cbf911445f37ef63fc5/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/10/17232664647229.jpg',
+      title:
+        'Karim López, el mexicano que es visto como la máxima promesa internacional para la nueva NBA',
+      subtitle: 'Basquetbol',
+      text: 'LW'
+    }
+  ],
+  ISection3CardsDivider: [
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/8a20d63e719ff39aa97d503457d77580/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/08/17231503328625.jpg',
+      title:
+        'Resumen USA vs Serbia: El Dream Team hace una épica voltereta y van por el Oro Olímpico de París 2024',
+      subtitle: 'Basquetbol'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/861ccec652f379c2d2608d4ccccd53a6/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/06/17229799732152.jpg',
+      title:
+        'Resumen Estados Unidos vs. Brasil: el Dream Team logra el objetivo y se mete a Semifinales del Básquet Olímpico 2024',
+      subtitle: 'Basquetbol'
+    },
+    {
+      src: 'https://phantom-marca-mx.unidadeditorial.es/9df62b6466dfacbd748b12152d19561d/resize/660/f/webp/mx/assets/multimedia/imagenes/2024/08/06/17229718569272.jpg',
+      title:
+        'USA Basketball vs Brasil: a qué hora juegan y dónde ver al Dream Team de Estados Unidos en Olímpicos 2024',
+      subtitle: 'Basquetbol'
+    }
+  ]
+}
+
+const sidebarItemsBasketball = [
+  {
+    title:
+      'LeBron James defiende a su hijo Bronny de los haters: "¡Sigue así, que se joda todo el odio y el ruido!"'
+  },
+  {
+    title: '¡Como todo un crack! Vinicius Jr tiene la más increíble colección de jerseys de la NBA'
+  },
+  {
+    title:
+      'Los Angeles Lakers se reúnen con Peso Pluma y sorprenden haciéndole un regalo muy especial'
+  },
+  { title: 'Cruz Azul vs Pumas' },
+  { title: 'Chiefs vs Ravens' },
+  { title: 'Lakers vs Warriors' },
+  { title: 'Gran Premio de Italia' },
+  { title: 'Simulacro Nacional' },
+  { title: 'Diablos Rojos vs Sultanes' },
+  { title: 'Jets vs 49ers' },
+  { title: 'Lo más leído' },
+  { title: 'Lo más visto' },
+  { title: 'Lo más comentado' }
+]
+
 const sidebarItems = [
   { title: 'Orden de los signos zodiacales' },
   { title: 'Canelo Álvarez pide revancha contra Bivol' },
@@ -235,6 +327,9 @@ const sidebarItems = [
     <ISectionFutbol />
     <ISectionMultiCard1Ads :cards="football.ISectionMultiCard1Ads" />
     <ISectionMatches />
+    <ISectionBasketball />
+    <ISection3CardsDivider :cards="Basketball.ISection3CardsDivider" />
+    <ISectionNews :cards="Basketball.ISectionNews" :sidebarItems="sidebarItemsBasketball" />
     <ITest />
     <IFooter />
   </v-app>
